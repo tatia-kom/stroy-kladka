@@ -1,0 +1,63 @@
+.top {
+  background: url('../img/top-bg.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 260px;
+
+  @media (max-width: $sm) {
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: $xs) {
+    padding-bottom: 50px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(179.61deg, rgba(255, 255, 255, 0) -135.38%, rgba(255, 255, 255, 0) -135.36%, #FFFFFF 99.67%);
+  }
+
+  &__title {
+    font-family: $font700;
+    font-size: 48px;
+    line-height: 56px;
+    max-width: 887px;
+    position: relative;
+    margin-top: 220px;
+
+    @media (max-width: $sm) {
+      font-size: 36px;
+      max-width: 100%;
+      line-height: 40px;
+      margin-top: 100px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 50px;
+    }
+  }
+
+  &__blocks {
+    position: relative;
+    margin-top: 131px;
+    display: flex;
+
+    @media (max-width: $sm) {
+      margin-top: 100px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 50px;
+      flex-direction: column;
+    }
+  }
+}

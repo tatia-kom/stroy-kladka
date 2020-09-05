@@ -1,0 +1,274 @@
+@import "layout/var";
+
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    color: $dark;
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+header, footer, section, div, span, p, button, a, input, textarea, form {
+    box-sizing: border-box;
+}
+
+button,input,textarea,select{
+    outline: none;
+}
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    width: 1420px;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+        width: 1120px;
+    }
+
+    @media (max-width: $md) {
+        width: 932px;
+    }
+
+    @media (max-width: $sm) {
+        width: 708px;
+    }
+
+    @media (max-width: $xs) {
+        width: calc(100% - 40px);
+    }
+}
+
+.button {
+    background: $buttonBg;
+    padding: 14px 32px;
+    font-size: 24px;
+    line-height: 28px;
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: $font;
+    transition: 0.3s;
+    position: relative;
+
+    @media (max-width: $sm) {
+        font-size: 18px;
+        padding: 14px 24px;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $dark;
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 40px;
+    }
+
+    span {
+        position: relative;
+    }
+
+    &:hover {
+        color: $yellow;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &--top {
+        padding: 16px 32px;
+        cursor: default;
+        box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 40px;
+
+        @media (max-width: $sm) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $xs) {
+            margin-right: 0;
+            margin-bottom: 24px;
+        }
+
+        &:hover {
+            color: inherit;
+
+            &:before {
+                opacity: 0;
+            }
+        }
+
+        strong {
+            display: block;
+            font-family: $font700;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+
+            @media (max-width: $sm) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &--black {
+        background: $dark;
+        color: $yellow!important;
+    }
+
+    &--white {
+        background: white;
+        color: black;
+    }
+
+    &--form {
+        &:before {
+            background: $yellow;
+        }
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.block-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+
+    @media (max-width: $sm) {
+        margin-top: 100px;
+    }
+
+    @media (max-width: $xs) {
+        margin-top: 50px;
+    }
+
+    &--no_top {
+        margin-top: 0;
+    }
+}
+
+.title-label {
+    font-family: $font700;
+    font-size: 18px;
+    line-height: 21px;
+    position: relative;
+
+    @media (max-width: $xs) {
+        font-size: 16px;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 97px;
+        height: 3px;
+        background: $yellow;
+        right: calc(100% + 24px);
+        top: 50%;
+        margin-top: -2px;
+
+        @media (max-width: $xs) {
+            width: 70px;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 97px;
+        height: 3px;
+        background: $yellow;
+        left: calc(100% + 24px);
+        top: 50%;
+        margin-top: -2px;
+
+        @media (max-width: $xs) {
+            width: 70px;
+        }
+    }
+}
+
+.title {
+    margin-top: 8px;
+    text-align: center;
+    font-family: $font700;
+    font-size: 48px;
+    line-height: 56px;
+
+    @media (max-width: $sm) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @media (max-width: $xs) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.subtitle-text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+    margin-top: 12px;
+    max-width: 796px;
+
+    @media (max-width: $xs) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

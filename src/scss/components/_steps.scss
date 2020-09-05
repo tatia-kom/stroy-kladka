@@ -1,0 +1,184 @@
+.steps {
+
+}
+
+.steps-block {
+  display: flex;
+
+  @media (max-width: $xs) {
+    flex-direction: column;
+  }
+
+  &:nth-child(2) {
+    margin-top: 100px;
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 24px;
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+
+    .steps-block__content {
+      padding-right: 160px;
+      padding-left: 0;
+
+      @media (max-width: $sm) {
+        padding-right: 24px;
+      }
+
+      @media (max-width: $xs) {
+        padding: 24px 20px;
+      }
+    }
+
+    .steps-block__text {
+      font-size: 24px;
+      line-height: 28px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    .steps-block__num {
+      right: 25px;
+
+      @media (max-width: $sm) {
+        right: 12px;
+      }
+
+      @media (max-width: $xs) {
+        right: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    flex-shrink: 0;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    padding: 51px 60px 51px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 710px;
+    flex-shrink: 0;
+    min-height: 400px;
+
+    @media (max-width: $lg) {
+      width: 560px;
+      padding-right: 90px;
+    }
+
+    @media (max-width: $md) {
+      width: 466px;
+      padding-right: 70px;
+    }
+
+    @media (max-width: $sm) {
+      width: 354px;
+      padding: 24px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      padding: 24px 20px;
+      min-height: 0;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    font-family: $font900;
+    font-size: 144px;
+    line-height: 169px;
+
+    @media (max-width: $md) {
+      font-size: 100px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+
+  &__title {
+    font-family: $font700;
+    font-size: 24px;
+    line-height: 28px;
+    color: black;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      line-height: 22px;
+      padding-right: 30px;
+    }
+  }
+
+  &__text {
+    margin: 16px 0;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 12px 0;
+    }
+
+    p {
+      margin-bottom: 48px;
+
+      @media (max-width: $xs) {
+        margin-bottom: 12px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: black;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 24px;
+  }
+}

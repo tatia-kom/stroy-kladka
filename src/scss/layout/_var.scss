@@ -1,0 +1,39 @@
+//fonts
+$font100: 'Museo Sans 100 Light';
+$font: 'Museo Sans 300 Light';
+$font700: 'Museo Sans 700 Bold';
+$font900: 'Museo Sans 900 Black';
+
+//colors
+
+$dark: #192437;
+$yellow: #FFC700;
+
+$buttonBg: linear-gradient(101.6deg, #FFC700 2.78%, #FF7A00 155.93%);
+
+//media
+
+$lg: 1499px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}

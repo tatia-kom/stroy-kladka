@@ -1,0 +1,73 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 245, 255, 0.3);
+  backdrop-filter: blur(40px);
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__content {
+    width: 464px;
+    max-width: 100%;
+    padding: 40px 60px;
+    background: $dark;
+    margin: auto;
+    position: relative;
+
+    @media (max-width: $xs) {
+      width: 280px;
+      padding: 24px;
+    }
+  }
+
+  &__close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    @media (max-width: $xs) {
+      top: 5px;
+      right: 5px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      height: 2px;
+      border-radius: 3px;
+      width: 24px;
+      transform: rotate(45deg);
+      background: $yellow;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0;
+      height: 2px;
+      border-radius: 3px;
+      width: 24px;
+      transform: rotate(-45deg);
+      background: $yellow;
+    }
+  }
+}
